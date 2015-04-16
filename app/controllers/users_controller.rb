@@ -32,6 +32,8 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user.avatar = params[:avatar]
+    @user.remove_avatar! if params[:remove_avatar]
     if @user.update(user_params)
       redirect_to account_path
     else
@@ -44,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:login, :password, :password_confirmation)
+    params.require(:user).permit(:login, :password, :password_confirmation, :avatar, :remove_avatar)
   end
 
 end

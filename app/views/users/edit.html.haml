@@ -1,0 +1,12 @@
+= form_for @user, {multipart: true} do |f|
+  .field
+    = f.label t "login"
+    = f.text_field :login
+  .field
+    = f.label t "avatar"
+    = f.file_field :avatar
+    = f.hidden_field :avatar_cache
+  .field
+    = f.check_box :remove_avatar
+    = t "remove_avatar"
+  = f.submit t "save"

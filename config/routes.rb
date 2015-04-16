@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :users, :rooms, :messages
 
-  get 'accoutn' => "users#show", :as => :account
+  get 'account' => "users#edit", :as => :account
 
 end

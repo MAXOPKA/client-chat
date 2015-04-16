@@ -23,6 +23,9 @@ ru:
   register: "Зарегистрироваться"
   enter: "Вход"
   have_errors: "Произошли ошибки"
+  avatar: "Аватар"
+  save: "Сохранить"
+  remove_avatar: "Удалить аватар"
   activerecord:
     errors:
       models:
