@@ -1,0 +1,14 @@
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation
+      %h2= "#{t 'have_errors'} :"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  = f.label t 'login'
+  = f.text_field :login
+  = f.label t 'password'
+  = f.password_field :password
+  = f.label t 'password_confirmation'
+  = f.password_field :password_confirmation
+  = f.submit t 'register'

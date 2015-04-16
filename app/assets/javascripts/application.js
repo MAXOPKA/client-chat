@@ -12,5 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+function refreshMessages(){
+
+}
+function refreshRooms(){
+
+}
+function sendMessage(){
+
+}
+function deleteMessage(id){
+
+}
+function editMessage(id){
+
+}

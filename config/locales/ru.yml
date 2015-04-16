@@ -1,0 +1,34 @@
+ru:
+  chat: "Чат"
+  room: "Комната"
+  rooms: "Комнаты"
+  registration: "Регистрация"
+  authorization: "Авторизация"
+  photo: "Фотография"
+  nickname: "Ник"
+  message: "Сообщение"
+  remove: "Удалить"
+  send: "Послать"
+  edit: "Редактировать"
+  apply: "Применить"
+  moderator: "Пользователь"
+  administrator: "Администратор"
+  user: "Пользователь"
+  write: "написал"
+  registration_error: "Вы должны быть зарегистрированы для доступа к этой странице"
+  login: "Логин"
+  login_successful: "Вы вошли"
+  password: "Пароль"
+  password_confirmation: "Повторите пароль"
+  register: "Зарегистрироваться"
+  enter: "Вход"
+  have_errors: "Произошли ошибки"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "Подтверждение пароля"
+            login:
+              taken: " занят"

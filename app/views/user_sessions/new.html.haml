@@ -1,0 +1,10 @@
+= t 'enter'
+%br/
+= form_for @user_session do |f|
+  = f.label t "nickname"
+  = f.text_field :login
+  = f.label t "password"
+  = f.password_field :password
+  = f.submit t 'enter'
+или
+= link_to (t 'registration'), new_user_path
