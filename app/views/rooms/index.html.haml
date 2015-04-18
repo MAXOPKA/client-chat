@@ -1,0 +1,9 @@
+%h1
+  = t "rooms"
+%ul
+  - @rooms.each do |r|
+    %li
+      = r.name
+      = link_to t("edit"), edit_room_path(r)
+      = link_to t("delete"),  r,  method: :delete, data: { :confirm => t("are_you_sure") }
+= link_to t("new_room"), new_room_path

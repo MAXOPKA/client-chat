@@ -1,3 +1,10 @@
 %header
-  #avatar
-    = image_tag @user.avatar.thumb
+  - unless @current_user.nil?
+    #avatar
+      = image_tag @current_user.avatar.thumb
+    #menu
+      %ul
+        %li
+          = link_to t("chat"), root_path
+        %li
+          = link_to t("logout"), logout_path

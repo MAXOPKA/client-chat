@@ -25,7 +25,15 @@ ru:
   have_errors: "Произошли ошибки"
   avatar: "Аватар"
   save: "Сохранить"
+  logout: "Выход"
   remove_avatar: "Удалить аватар"
+  new_room: "Новая комната чата"
+  locked_room: "Приватная комната"
+  name: "Имя"
+  are_you_sure: "Вы уверены?"
+  delete: "Удалить"
+  edit: "Редактировать"
+  edit_room: "Редактирование комнаты"
   activerecord:
     errors:
       models:
