@@ -13,7 +13,6 @@ class RoomsController < ApplicationController
     if Room.create
       redirect_to rooms_path
     else
-
       render :new
     end
   end

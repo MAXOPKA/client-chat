@@ -11,18 +11,6 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-function refreshMessages(){
+//= require websocket_rails/main
+//= require_tree ./
 
-}
-function refreshRooms(){
-
-}
-function sendMessage(){
-
-}
-function deleteMessage(id){
-
-}
-function editMessage(id){
-
-}

@@ -1,9 +1,13 @@
-class ChatController < ApplicationController
+class ChatController < WebsocketRails::BaseController
 
-  include ChatHelper
+  include ApplicationHelper
 
-  def index
+  before_action do
+    Authlogic::Session::Base.controller = Authlogic::ControllerAdapters::RailsAdapter.new(self)
+  end
 
+  def cookies
+    request.cookies
   end
 
 end

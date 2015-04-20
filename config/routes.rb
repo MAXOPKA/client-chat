@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'chat#index'
+  root 'main#index'
 
   get 'login' => "user_sessions#new", :as => :login
   post 'login' => "user_sessions#create", :as => :user_sessions
