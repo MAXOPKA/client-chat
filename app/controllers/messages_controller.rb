@@ -3,7 +3,7 @@ class MessagesController < ChatController
   MESSAGES_LIMIT = 10
 
   def create
-    @message = Message.new(data)
+    @message = Message.new({ :message => strip_tags(data[:message]) })
     @message.user = current_user
     if @message.save
       broadcast_message :new_message, render_message(@message)
