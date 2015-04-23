@@ -16,3 +16,9 @@ input[type=text]{
 form label{
     display: block;
 }
+#chat{
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px dotted #ddd;
+    padding: 10px;
+}
