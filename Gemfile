@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'puma'
 
 gem 'authlogic'
 gem 'cancancan'
@@ -24,8 +25,11 @@ gem 'mini_magick'
 gem 'carrierwave'
 
 group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+  #gem "autotest"
+  gem "rspec-rails"
+  #gem "cucumber-rails"
+  #gem "webrat"
+  gem 'factory_girl_rails'
+  #gem 'email_spec'
 end
 

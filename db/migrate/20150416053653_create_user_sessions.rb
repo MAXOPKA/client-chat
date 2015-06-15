@@ -1,8 +1,12 @@
 class CreateUserSessions < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :user_sessions do |t|
       t.text :data
       t.timestamps null: false
     end
+  end
+
+  def self.down
+    drop_table :user_sessions
   end
 end
