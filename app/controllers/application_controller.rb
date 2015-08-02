@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  load_and_authorize_resource
+
   include ApplicationHelper
 
   helper_method :current_user

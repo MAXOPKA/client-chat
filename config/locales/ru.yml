@@ -27,13 +27,13 @@ ru:
   save: "Сохранить"
   logout: "Выход"
   remove_avatar: "Удалить аватар"
-  new_room: "Новая комната чата"
-  locked_room: "Приватная комната"
+  new_chat: "Новая комната чата"
+  locked_chat: "Приватная комната"
   name: "Имя"
   are_you_sure: "Вы уверены?"
   delete: "Удалить"
   edit: "Редактировать"
-  edit_room: "Редактирование комнаты"
+  edit_chat: "Редактирование комнаты"
   activerecord:
     errors:
       models:

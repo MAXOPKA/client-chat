@@ -3,6 +3,7 @@ module Authlogic
     def create_user_session(user)
       post login_path, login: user.login, password: user.password
     end
+
   end
 end
 

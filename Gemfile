@@ -27,6 +27,7 @@ gem 'carrierwave'
 group :development, :test do
   #gem "autotest"
   gem "rspec-rails"
+  gem "faker"
   #gem "cucumber-rails"
   #gem "webrat"
   gem 'factory_girl_rails'

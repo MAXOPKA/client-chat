@@ -1,6 +1,0 @@
-@messages.each do |m|
-  json.extract! m, :id
-  json.extract! m, :message
-  json.extract! m.user, :name
-  json.extract! m.user, :avatar
-end

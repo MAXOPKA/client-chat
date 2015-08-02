@@ -1,7 +1,14 @@
+require "faker"
+
 FactoryGirl.define do
   factory :user do
-    login 'admin'
-    password  '123456'
-    password_confirmation '123456'
+    pw = Faker::Internet.password(8)
+    password  pw
+    password_confirmation pw
+
+    trait(:admin) {role "admin"; login Faker::Hacker.noun}
+    trait(:manager) {role "manager"; login Faker::Hacker.noun}
+    trait(:client) {role "client"; login Faker::Hacker.noun}
+
   end
 end

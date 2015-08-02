@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'main#index'
+  root 'demo#index'
+  get 'client', to: 'demo#client'
+  get 'manager', to: 'demo#manager'
+  get 'admin', to: 'demo#admin'
+  get 'chat', to: 'demo#chat'
+
+  get 'client/index'
+
+  get 'manager/index'
+
+  get 'admin/index'
+
+  #root 'main#index'
 
   get 'login' => "user_sessions#new", :as => :login
   post 'login' => "user_sessions#create", :as => :user_sessions
@@ -8,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'registration' => "users#new", :as => :new_user
 
-  resources :users, :rooms, :messages
+  resources :users, :chats, :messages
 
   get 'account' => "users#edit", :as => :account
 

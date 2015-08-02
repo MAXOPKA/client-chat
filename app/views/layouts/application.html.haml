@@ -4,9 +4,6 @@
     = javascript_include_tag 'application'
     = stylesheet_link_tag 'application'
   %body
-    #main
-      #center
-        #header
-          = render "share/head"
-        #middle
-          = yield
+    = render partial: 'header'
+    = yield
+    = render partial: 'footer'
