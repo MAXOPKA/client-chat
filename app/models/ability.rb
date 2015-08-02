@@ -22,11 +22,11 @@ class Ability
   end
 
   def user
-    can :main, :index
+    can :demo
   end
 
   def roles
-    ["admin", "manager", "client"]
+    ['admin', 'manager', 'client', 'user']
   end
 
 end

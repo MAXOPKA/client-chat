@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'demo#index'
+  
   get 'client', to: 'demo#client'
   get 'manager', to: 'demo#manager'
   get 'admin', to: 'demo#admin'
