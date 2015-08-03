@@ -8,4 +8,7 @@ class DemoController < ApplicationController
 
   def login
   end
+
+  def manager_profile
+  end
 end

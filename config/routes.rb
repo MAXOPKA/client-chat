@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'demo#index'
 
   get 'client', to: 'demo#client'
+  get 'manager_profile', to: 'demo#manager_profile'
   get 'manager', to: 'demo#manager'
   get 'admin', to: 'demo#admin'
   get 'chat', to: 'demo#chat'
