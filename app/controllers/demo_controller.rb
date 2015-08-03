@@ -11,4 +11,19 @@ class DemoController < ApplicationController
 
   def manager_profile
   end
+
+  def client_profile
+  end
+
+  def clients
+  end
+
+  def managers
+  end
+
+  def chats
+  end
+
+  def chat
+  end
 end
