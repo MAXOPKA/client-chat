@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
   root 'demo#index'
-  
+
   get 'client', to: 'demo#client'
   get 'manager', to: 'demo#manager'
   get 'admin', to: 'demo#admin'
   get 'chat', to: 'demo#chat'
+  get 'login', to: 'demo#login'
 
   get 'client/index'
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
   #root 'main#index'
 
-  get 'login' => "user_sessions#new", :as => :login
+  #get 'login' => "user_sessions#new", :as => :login
   post 'login' => "user_sessions#create", :as => :user_sessions
   get 'logout' => "user_sessions#destroy", :as => :logout
 
