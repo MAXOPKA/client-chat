@@ -26,4 +26,7 @@ class DemoController < ApplicationController
 
   def chat
   end
+
+  def manager_chats
+  end
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'client', to: 'demo#client'
   get 'manager_profile', to: 'demo#manager_profile'
-  get 'manager_profile', to: 'demo#manager_profile'
+  get 'manager_chats', to: 'demo#manager_chats'
   get 'client_profile', to: 'demo#client_profile'
   get 'clients', to: 'demo#clients'
   get 'manager', to: 'demo#manager'

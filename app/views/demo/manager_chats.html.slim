@@ -1,0 +1,40 @@
+form
+  label{for = 'client'}
+  select{name = 'client'}
+    - (1..6).each do |i|
+      option{value = i}
+        | Клиент #{i}
+    input{type = 'checkbox', name = 'group' }
+    label{for = 'group'}
+      | Групповые чаты
+    label{for = 'query'}
+    br
+      | Поиск по тексту
+    input{type = 'text', name = 'query'}
+br
+table
+  - 3.times do
+    tr
+      td
+        | Пометить
+      td
+        | Клиент 1
+      td
+        | Менеджер 1, Клиент
+      td
+        | 04.08.2015 21:23
+      td
+        a
+          | Продолжить
+      td
+        a
+          | Посмотреть
+      td
+        a
+          | Редактировать
+      td
+        a
+          | Скачать(.doc)
+      td
+        a
+          | Удалить
