@@ -1,0 +1,28 @@
+.messages
+  .message
+    .left_side
+      .user_info
+        .user_photo
+          img{src = '/'}
+        .user_name
+          | Дмитрий (Я)
+    .right_side
+      .message_text
+        | Тескт моего сообщения
+  .message
+    .left_side
+      .message_text
+        | Текст сообщения моего менеджра
+    .right_side
+      .user_info
+        .user_photo
+          img{src = '/'}
+        .user_name
+          | Валерий (Менеджер)
+form
+  textarea
+  label{for = 'attach'}
+    | Прикрепить файл
+  br
+  input{type = 'file'}
+  input{type = 'submit'}
