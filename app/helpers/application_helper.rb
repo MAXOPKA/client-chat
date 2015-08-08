@@ -3,7 +3,7 @@ module ApplicationHelper
   def require_user
     unless current_user
       flash[:notice] = I18n.t "registration_error"
-      redirect_to login_path
+      redirect_to root_path
       return false
     end
   end

@@ -1,24 +1,31 @@
 .messages
-  .message
-    .left_side
-      .user_info
-        .user_photo
-          img{src = '/'}
-        .user_name
-          | Дмитрий (Я)
-    .right_side
-      .message_text
-        | Тескт моего сообщения
-  .message
-    .left_side
-      .message_text
-        | Текст сообщения моего менеджра
-    .right_side
-      .user_info
-        .user_photo
-          img{src = '/'}
-        .user_name
-          | Валерий (Менеджер)
+  - 4.times
+    .message.left
+      .left_side
+        .user_info
+          .user_photo
+            img{src = '/assets/user_photo'}
+          .user_name
+            | Дмитрий (Я)
+          .message_date
+            | 12.03.2015
+      .right_side
+        .message_text
+          | Тескт моего сообщения
+      .clear
+    .message.right
+      .left_side
+        .message_text
+          | Текст сообщения моего менеджра
+      .right_side
+        .user_info
+          .user_photo
+            img{src = '/assets/user_photo'}
+          .user_name
+            | Валерий (Менеджер)
+          .message_date
+            | 12.03.2015
+      .clear
 form
   textarea
   label{for = 'attach'}

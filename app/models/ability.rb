@@ -1,20 +1,22 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(u)
-    u ||= User.new
-    send(u.role) if roles.include? u.role
-    user if u.role.nil?
+  def initialize u
+    unless u.nil?
+      self.send(u.role)
+    else
+      self.user
+    end
   end
 
-  private
+  protected
 
   def admin
     can :manage, :all
   end
 
   def manager
-    can [:read, :create, :update], user
+    can [:read, :create, :update], User
   end
 
   def client
@@ -22,11 +24,7 @@ class Ability
   end
 
   def user
-    can :demo
-  end
-
-  def roles
-    ['admin', 'manager', 'client', 'user']
+    can [:new, :create], UserSession
   end
 
 end

@@ -1,0 +1,9 @@
+= form_for @user_session do |f|
+  label{for = 'login'}
+    | Логин
+  = f.text_field :login
+  label{for = 'password'}
+    | Пароль
+  = f.password_field :password
+  br
+  input{value = 'Войти', type = 'submit'}
