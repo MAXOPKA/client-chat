@@ -1449,7 +1449,11 @@
 	}
 	.messages{
   	max-height: 30em;
+<<<<<<< HEAD
   	overflow-y: scroll;
+=======
+  	overflow: scroll;
+>>>>>>> 19625c0b540258aaf25ae38e661783180f21e8a5
   }
 
   .message.left{
