@@ -22,6 +22,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'kaminari'
 
 group :development, :test do
   #gem "autotest"
