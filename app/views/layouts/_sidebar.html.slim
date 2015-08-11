@@ -2,4 +2,5 @@
   h1#logo
     a[href="#"]
       | Название компании
-  = render 'layouts/menu'
+  - unless current_user.nil?
+    = render 'layouts/menu'

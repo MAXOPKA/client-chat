@@ -1,0 +1,14 @@
+button{type = 'button'}
+  | Новый
+br
+table
+  - @users.each do |user|
+    tr
+      th
+        | #{ user.full_name }
+      th
+        = link_to edit_admin_user_path(user)
+          | Редактировать
+      th
+        = link_to admin_user_path(user), method: :delete, data: {confirm: 'Вы уверены?'}
+          | Удалить
