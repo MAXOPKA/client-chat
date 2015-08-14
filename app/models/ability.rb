@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize u
+    can :manage, UserSession
     unless u.nil?
       self.send(u.role)
     else
@@ -16,7 +17,7 @@ class Ability
   end
 
   def manager
-    can [:read, :create, :update], User
+    can [:read, :create, :update, :show], User
   end
 
   def client

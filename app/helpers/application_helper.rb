@@ -24,4 +24,7 @@ module ApplicationHelper
     @current_user = current_user_session && current_user_session.record
   end
 
+  def current path
+    "#{current_page?(path) ? 'current' : '' }"
+  end
 end

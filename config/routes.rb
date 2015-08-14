@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'user_sessions#new'
 
+  get :profile, to: 'users#show'
+
   namespace :admin do
     root 'users#index'
     resources :users, :chats
@@ -13,9 +15,10 @@ Rails.application.routes.draw do
   end
 
   namespace :client do
-    root 'users#show'
+    root 'chats#show'
   end
 
-  resources :user_sessions, only: [:new, :create, :destroy]
-
+  resources :user_sessions
+  get :logout, to: 'user_sessions#destroy'
+  get :login, to: 'user_sessions#new'
 end
