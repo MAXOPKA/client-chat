@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   [:admin, :manager, :client].each do |r|
     define_method("#{r}?") { role == "#{r}" }
+    scope r, -> { where(role: r.to_s) }
   end
 
   def full_name
