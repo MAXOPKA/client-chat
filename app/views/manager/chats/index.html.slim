@@ -1,0 +1,34 @@
+form#search_chats
+  label{for = 'search[client]'}
+  select{name = 'search[client]'}
+    - manager.clients.each do |client|
+      option{value = client.id}
+        | #{client.full_name}
+    input{type = 'checkbox', name = 'search[group]' }
+    label{for = 'search[group]'}
+      | Групповые чаты
+    label{for = 'search[query]'}
+    br
+      | Поиск по тексту
+    input{type = 'text', name = 'search[query]'}
+br
+table
+  - @chats.each do |chat|
+    tr
+      td
+        | Пометить
+      td
+        | #{ chat.client.full_name }
+      td
+        | #{ chat_members(chat) }
+      td
+        | #{ chat.created_at.strfdate("%d.%m.%Y %h:%n") }
+      td
+        = link_to manager_chat_path(chat), 'Продолжить'
+      td
+        = link_to manager_edit_chat_path(chat), 'Редактировать'
+      td
+        = link_to "#{manager_chat_path(chat)}.docx", 'Скачать(.docx)'
+      td
+        a
+        = link_to manager_chat_path(chat), 'Удалить', method: :delete, data: { confirm: 'Удалить?' }

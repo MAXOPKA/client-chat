@@ -2,8 +2,6 @@ class User < ActiveRecord::Base
 
   acts_as_authentic
 
-  scope :managers, -> { where(role: 'manager') }
-
   has_many :users_chats
   has_many :chats, through: :users_chats
   has_many :messages

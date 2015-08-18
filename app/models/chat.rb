@@ -1,6 +1,6 @@
 class Chat < ActiveRecord::Base
 
-  STATUSES = %w pending open closed deleted
+  STATUSES = %w(pending open closed deleted)
 
   has_many :users_chats
   has_many :users, through: :users_chats
