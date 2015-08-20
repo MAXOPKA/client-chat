@@ -18,6 +18,9 @@ class Ability
 
   def manager
     can [:read, :create, :update, :show], User
+    can [:read, :create, :update, :show], Chat do |chat|
+
+    end
   end
 
   def client

@@ -1,7 +1,7 @@
 form#search_chats
   label{for = 'search[client]'}
   select{name = 'search[client]'}
-    - manager.clients.each do |client|
+    - User.client.each do |client|
       option{value = client.id}
         | #{client.full_name}
     input{type = 'checkbox', name = 'search[group]' }

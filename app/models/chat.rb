@@ -6,6 +6,8 @@ class Chat < ActiveRecord::Base
   has_many :users, through: :users_chats
   has_many :messages, dependent: :destroy
 
-  mount_uploader :avatar, AttachUploader
+  belongs_to :client, class_name: User
+  belongs_to :manager, class_name: User
+
 
 end
