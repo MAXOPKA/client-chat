@@ -13,22 +13,24 @@ form#search_chats
     input{type = 'text', name = 'search[query]'}
 br
 table
-  - @chats.each do |chat|
+  thead
     tr
-      td
-        | Пометить
-      td
-        | #{ chat.client.full_name }
-      td
-        | #{ chat_members(chat) }
-      td
-        | #{ chat.created_at.strfdate("%d.%m.%Y %h:%n") }
-      td
-        = link_to manager_chat_path(chat), 'Продолжить'
-      td
-        = link_to manager_edit_chat_path(chat), 'Редактировать'
-      td
-        = link_to "#{manager_chat_path(chat)}.docx", 'Скачать(.docx)'
-      td
-        a
-        = link_to manager_chat_path(chat), 'Удалить', method: :delete, data: { confirm: 'Удалить?' }
+      th #
+      th Клиент
+      th Участники
+      th Датаначала
+      th ...
+      th ...
+      th ...
+      th ...
+  tbody
+    - @chats.each do |chat|
+      tr
+        td Пометить
+        td #{ chat.client.full_name }
+        td #{ chat_members(chat) }
+        td #{ chat.created_at.strfdate("%d.%m.%Y %h:%n") }
+        td = link_to manager_chat_path(chat), 'Продолжить'
+        td = link_to manager_edit_chat_path(chat), 'Редактировать'
+        td = link_to "#{manager_chat_path(chat)}.docx", 'Скачать(.docx)'
+        td = link_to manager_chat_path(chat), 'Удалить', method: :delete, data: { confirm: 'Удалить?' }

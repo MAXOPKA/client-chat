@@ -4,7 +4,10 @@
   = f.label :second_name
   = f.text_field :second_name
   = f.label :avatar
+  br/
   = f.file_field :avatar
+  br/
+  = image_tag @user.avatar.thumb
   br/
   = f.label :description
   = f.text_field :description
@@ -14,4 +17,5 @@
   = f.text_field :login
   = f.label :password
   = f.text_field :password
+  br/
   = f.submit 'Сохранить'
