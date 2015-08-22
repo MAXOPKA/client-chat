@@ -27,7 +27,7 @@ class Manager::UsersController < ApplicationController
 
   def destroy
     @user.delete
-    render nothing: true
+    redirect_to manager_users_path
   end
 
   private
