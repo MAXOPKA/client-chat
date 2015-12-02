@@ -13,6 +13,7 @@ gem 'puma'
 
 gem 'authlogic'
 gem 'cancancan'
+gem 'rails-settings-cached', '~> 0.4.0'
 
 gem 'thin'
 gem 'websocket-rails', git: 'git://github.com/DanKnox/websocket-rails.git'
@@ -25,12 +26,8 @@ gem 'carrierwave'
 gem 'kaminari'
 
 group :development, :test do
-  #gem "autotest"
-  gem "rspec-rails"
-  gem "faker"
-  #gem "cucumber-rails"
-  #gem "webrat"
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
-  #gem 'email_spec'
+  gem 'faker'
 end
 

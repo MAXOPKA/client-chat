@@ -1,2 +1,2 @@
-class Client::ChatsController < ApplicationController
+class Client::ChatsController < ClientController
 end

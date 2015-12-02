@@ -2,18 +2,24 @@ nav#nav
   ul
     li[class="#{current profile_path}"]
       = link_to 'Профиль', profile_path
+
     - if current_user.client?
       li[class="#{current client_chats_paht}"]
         = link_to 'Чат', client_chats_paht
+
     - if current_user.manager?
       li[class="#{current manager_users_path}"]
         = link_to 'Клиенты', manager_users_path
       li[class="#{current manager_chats_path}"]
         = link_to 'Чаты', manager_chats_path
+
     - if current_user.admin?
       li[class="#{current admin_users_path}"]
         = link_to 'Менеджеры', admin_users_path
       li[class="#{current admin_chats_path}"]
         = link_to 'Чаты', admin_chats_path
+      li[class="#{current admin_settings_path}"]
+        = link_to 'Настройки', admin_settings_path
+
     li
       = link_to 'Выход', logout_path

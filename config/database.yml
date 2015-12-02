@@ -1,14 +1,15 @@
 default: &default
   adapter: postgresql
-  pool: 5
-  timeout: 5000
+  encoding: unicode
+  pool: 25
+  username: postgres
   password: 123456
-  user: ror
   host: localhost
   port: 5432
-  database: little-chat
+  template: template0
 
 development:
+  database: client_chat
   <<: *default
 
 # Warning: The database defined as "test" will be erased and
@@ -16,6 +17,7 @@ development:
 # Do not set this db to the same as development or production.
 
 test:
+  database: client-chat_test
   <<: *default
 
 production:

@@ -1,4 +1,4 @@
-class Manager::ChatsController < ApplicationController
+class Manager::ChatsController < ManagerController
 
   def index
     @chats = current_user.chats

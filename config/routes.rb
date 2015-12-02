@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'users#index'
-    resources :users, :chats
+    resources :users, :chats, :settings
   end
 
   namespace :manager do

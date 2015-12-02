@@ -1,4 +1,4 @@
-class Manager::UsersController < ApplicationController
+class Manager::UsersController < ManagerController
 
   before_action :set_user, only: [:edit, :update, :destroy]
   before_action :set_password, only: [:create, :update]
